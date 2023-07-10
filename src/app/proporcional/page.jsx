@@ -74,125 +74,125 @@ export default function ProporcionalPage() {
 
   return (
     <form name="form_main" className="grid">
-      <div className="text-center">
-        <ul>
-          <li>
-            <figure className="-mt-1">
-              <Image
-                src={image5}
-                alt="Cadastrar Ramal"
-                className="w-screen h-[50vh]"
-              />
-            </figure>
-          </li>
-        </ul>
-
-        <ul>
-          <li className="inline-block">
-            <label htmlFor="date_ini">Data Inicial:</label>
-            <input
-              onChange={countDays}
-              name="date_ini"
-              id="date_ini"
-              type="date"
-              autoFocus
+      <ul>
+        <li>
+          <figure className="-mt-1">
+            <Image
+              src={image5}
+              alt="Cadastrar Ramal"
+              className="w-screen h-[40vh] object-cover"
             />
-          </li>
-          <li className="inline-block">
-            <label htmlFor="date_end">Data Final:</label>
-            <input
-              onChange={countDays}
-              name="date_end"
-              id="date_end"
-              type="date"
-            />
-          </li>
-        </ul>
-      </div>
-
-      <div className="text-center">
-        <ul>
-          <li className="inline-block">
-            <input
-              onChange={countDays}
-              type="radio"
-              className="btn-check"
-              name="options-outlined"
-              id="incluirdia"
-              defaultChecked
-            />
-            <label className="btn btn-outline-success" htmlFor="incluirdia">
-              INCLUIR DATA INICIAL
-            </label>
-          </li>
-          <li className="inline-block">
-            <input
-              onChange={countDays}
-              type="radio"
-              className="btn-check"
-              name="options-outlined"
-              id="danger-outlined"
-            />
-            <label className="btn btn-outline-danger" htmlFor="danger-outlined">
-              NÃO INCLUIR
-            </label>
-          </li>
-        </ul>
-      </div>
-
-      <div className="text-center">
-        <ul>
-          <li className="inline-block">
-            <div className="input-group mb-3">
-              <span className="input-group-text">VALOR - PLANO:</span>
+          </figure>
+        </li>
+      </ul>
+      <div className=" items-center text-center mt-12 h-[50vh]">
+        <div className="text-center ">
+          <ul>
+            <li className="inline-block">
+              <label htmlFor="date_ini">Data Inicial:</label>
               <input
-                id="plano"
-                onKeyUp={contarpelovalor}
-                type="number"
-                className="form-control"
-                placeholder="Ex: 60"
-                step="any"
+                onChange={countDays}
+                name="date_ini"
+                id="date_ini"
+                type="date"
+                autoFocus
               />
-            </div>
-          </li>
-          <li className="inline-block">
-            <div className="input-group mb-3">
-              <span className="input-group-text">DIAS PASSADOS:</span>
+            </li>
+            <li className="inline-block">
+              <label htmlFor="date_end">Data Final:</label>
               <input
-                id="days"
-                onKeyUp={contarpelosdias}
-                type="number"
-                className="form-control"
-                onKeyPress={(event) =>
-                  event.charCode >= 48 && event.charCode <= 57
-                }
+                onChange={countDays}
+                name="date_end"
+                id="date_end"
+                type="date"
               />
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <strong>
-          <p id="formula">{formula}</p>
-        </strong>
-        <strong>
-          <h2 id="res">
-            Resultado: <br />
-            {resultado}
-          </h2>
-        </strong>
-      </div>
-
-      <div className="text-center">
-        <button
-          id="btn"
-          className="btn btn-green btn-success"
-          type="button"
-          onClick={countDays}
-        >
-          CALCULAR
-        </button>
+            </li>
+          </ul>
+        </div>
+        <div className="text-center ">
+          <ul>
+            <li className="inline-block">
+              <input
+                onChange={countDays}
+                type="radio"
+                className="btn-check"
+                name="options-outlined"
+                id="incluirdia"
+                defaultChecked
+              />
+              <label className="btn btn-outline-success" htmlFor="incluirdia">
+                INCLUIR DATA INICIAL
+              </label>
+            </li>
+            <li className="inline-block">
+              <input
+                onChange={countDays}
+                type="radio"
+                className="btn-check"
+                name="options-outlined"
+                id="danger-outlined"
+              />
+              <label
+                className="btn btn-outline-danger"
+                htmlFor="danger-outlined"
+              >
+                NÃO INCLUIR
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div className="text-center">
+          <ul>
+            <li className="inline-block">
+              <div className="input-group mb-3">
+                <span className="input-group-text">VALOR - PLANO:</span>
+                <input
+                  id="plano"
+                  onKeyUp={contarpelovalor}
+                  type="number"
+                  className="form-control"
+                  placeholder="Ex: 60"
+                  step="any"
+                />
+              </div>
+            </li>
+            <li className="inline-block">
+              <div className="input-group mb-3">
+                <span className="input-group-text">DIAS PASSADOS:</span>
+                <input
+                  id="days"
+                  onKeyUp={contarpelosdias}
+                  type="number"
+                  className="form-control"
+                  onKeyPress={(event) =>
+                    event.charCode >= 48 && event.charCode <= 57
+                  }
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <strong>
+            <p id="formula">{formula}</p>
+          </strong>
+          <strong>
+            <h2 id="res">
+              Resultado: <br />
+              {resultado}
+            </h2>
+          </strong>
+        </div>
+        <div className="text-center ">
+          <button
+            id="btn"
+            className="btn bg-blue-700 text-white hover:text-black hover:bg-white btn-success"
+            type="button"
+            onClick={countDays}
+          >
+            CALCULAR
+          </button>
+        </div>
       </div>
     </form>
   );
