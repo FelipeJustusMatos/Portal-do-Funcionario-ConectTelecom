@@ -15,11 +15,11 @@ export default function Home() {
   };
   return (
     <>
-      <main className="flex w-full h-[100vh]  ">
-        <div className="w-full flex flex-col justify-center items-center">
-          <div className=" mt-20 grid grid-cols-3 gap-10 h-auto content-around ">
+      <main className="flex w-full h-[100vh] bg-light ">
+        <div className="w-full flex flex-col justify-center bg-light items-center">
+          <div className=" grid grid-cols-3 bg-light  text-black gap-10 h-auto  ">
             {/* card 1 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact  w-72 shadow-xl">
               <figure>
                 <Image
                   src={image5}
@@ -35,7 +35,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => router.push("/proporcional")}
-                    className="btn w-full bg-blue-700 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-light text-white hover:text-black"
                   >
                     Acessar
                   </button>

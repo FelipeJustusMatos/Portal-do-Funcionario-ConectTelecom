@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        sidebar: "300px",
+      },
       fontFamily: {
         mont: ["var(--font-mont)"],
       },
