@@ -73,14 +73,14 @@ export default function ProporcionalPage() {
   };
 
   return (
-    <form name="form_main" className="grid">
+    <form name="form_main" className="grid ">
       <ul>
         <li>
           <figure className="-mt-1">
             <Image
               src={image5}
               alt="Cadastrar Ramal"
-              className="w-screen h-[40vh] object-cover"
+              className="w-screen rounded-tl-3xl -mt-2 h-[40vh] object-cover"
             />
           </figure>
         </li>

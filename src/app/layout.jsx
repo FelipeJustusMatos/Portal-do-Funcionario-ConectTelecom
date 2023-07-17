@@ -25,6 +25,8 @@ export default function RootLayout({ children }) {
     setIsOpen(!isOpen);
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
@@ -95,8 +97,15 @@ export default function RootLayout({ children }) {
                 Carros
               </Link>
             </button>
+            <footer className="bg-neutral text-white py-4 px-8 text-center">
+              <p className="text-sm">Felipe Justus</p>
+              <p className="text-sm">
+                &copy; {currentYear} All Rights Reserved.
+              </p>
+            </footer>
           </div>
-          <main className="flex flex-initial ml-10 p-4 bg-light w-full">
+
+          <main className="flex flex-initial ml-10 pt-2 h-[100vh] rounded-tl-3xl   w-full">
             {children}
           </main>
         </div>

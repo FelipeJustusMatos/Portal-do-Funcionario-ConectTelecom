@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import image5 from "../../../public/img/lista_ramais.webp";
+import image from "../../../public/img/lista_ramais.webp";
 import Image from "next/image";
 
 const ListRamaisPage = () => {
@@ -81,49 +81,31 @@ const ListRamaisPage = () => {
   }
 
   return (
-    <div className="container min-h-[95vh] mx-auto">
+    <div className="container mx-auto">
       <ul>
         <li>
           <figure className="-mt-1">
             <Image
-              src={image5}
+              src={image}
               alt="Cadastrar Ramal"
-              className="w-screen h-[40vh] object-cover"
+              className="w-screen rounded-tl-3xl -mt-2 h-[40vh] object-cover"
             />
           </figure>
         </li>
       </ul>
-      <div className="border border-solid rounded-md  max-h-[50vh] overflow-y-scroll">
-        <table className="table">
-          <thead className="sticky top-0 border-2 border-solid  bg-white z-10">
-            <tr>
-              <th
-                scope="col"
-                className="text-black"
-                onClick={() => handleSort("ramal")}
-              >
+      <div className="border border-black max-h-[60vh] overflow-y-scroll">
+        <table className="table table-zebra">
+          <thead className="sticky top-0 border-2 bg-gray-700 z-10">
+            <tr className=" text-gray-100">
+              <th scope="col" onClick={() => handleSort("ramal")}>
                 Ramal{" "}
                 {sortBy === "ramal" && (
                   <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
                 )}
               </th>
-              <th
-                scope="col"
-                className="text-black"
-                onClick={() => handleSort("nome")}
-              >
+              <th scope="col" colSpan="2" onClick={() => handleSort("nome")}>
                 Nome{" "}
                 {sortBy === "nome" && (
-                  <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
-                )}
-              </th>
-              <th
-                scope="col"
-                className="text-black"
-                onClick={() => handleSort("local")}
-              >
-                Local{" "}
-                {sortBy === "local" && (
                   <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
                 )}
               </th>
@@ -132,7 +114,7 @@ const ListRamaisPage = () => {
                   id="locationSelect"
                   value={selectedLocation}
                   onChange={handleLocationChange}
-                  className="w-full text-black"
+                  className="w-1/2 ml-20 text-black"
                 >
                   <option value="">Selecione um Local</option>
                   {locations.map((location) => (
@@ -142,12 +124,19 @@ const ListRamaisPage = () => {
                   ))}
                 </select>
               </th>
+              <th scope="col" colSpan="2" onClick={() => handleSort("local")}>
+                Local{" "}
+                {sortBy === "local" && (
+                  <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
+                )}
+              </th>
+
               <th className="text-black">
                 <input
                   type="text"
                   value={searchValue}
                   onChange={handleSearchChange}
-                  className="ml-2 p-1 border border-black"
+                  className="ml-20 p-1 border border-black"
                   placeholder="Pesquisar por nome"
                 />
               </th>
@@ -155,10 +144,12 @@ const ListRamaisPage = () => {
           </thead>
           <tbody>
             {filteredData?.map((item) => (
-              <tr key={item.ramal}>
-                <td>{item.ramal}</td>
-                <td>{item.nome}</td>
-                <td>{item.local}</td>
+              <tr className="w-full " key={item.ramal}>
+                <td className="w-1/5" colSpan="1">
+                  {item.ramal}
+                </td>
+                <td colSpan="3">{item.nome}</td>
+                <td colSpan="3">{item.local}</td>
               </tr>
             ))}
           </tbody>
