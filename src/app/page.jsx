@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import image3 from "../../public/img/API-SUPORTE.png";
 import image from "../../public/img/CARROS.webp";
 import image2 from "../../public/img/cadastrar_ramal.webp";
-import image3 from "../../public/img/API-SUPORTE.png";
 import image4 from "../../public/img/lista_ramais.webp";
 import image5 from "../../public/img/simples.webp";
 import image6 from "../../public/img/troca_plano.webp";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
@@ -19,7 +19,7 @@ export default function Home() {
         <div className="w-full flex flex-col justify-center items-center">
           <div className="grid grid-cols-3 gap-10 h-auto">
             {/* card 1 */}
-            <div className="card card-compact  w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <Image
                   src={image5}

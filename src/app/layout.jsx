@@ -1,12 +1,12 @@
 "use client";
-import Link from "next/link";
-import { notFound, usePathname, useRouter } from "next/navigation"; // Importe o useRouter corretamente
-import "./globals.css";
 import { Inter } from "next/font/google";
-import imglogo from "../../public/img/logoportal.svg";
 import Image from "next/image";
-import useThemeSwitcher from "../app/useThemeSwitcher";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation"; // Importe o useRouter corretamente
 import { React, useState } from "react";
+import imglogo from "../../public/img/logoportal.svg";
+import useThemeSwitcher from "../app/useThemeSwitcher";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="flex  ">
+        <div className="flex">
           <div className="bg-neutral pt-5 flex flex-col col-span-1 items-center text-white w-sidebar">
             <div>
               <a
