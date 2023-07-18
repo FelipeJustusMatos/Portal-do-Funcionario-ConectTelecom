@@ -88,12 +88,12 @@ const ListRamaisPage = () => {
             <Image
               src={image}
               alt="Cadastrar Ramal"
-              className="w-screen rounded-tl-3xl -mt-2 h-[40vh] object-cover"
+              className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
             />
           </figure>
         </li>
       </ul>
-      <div className="border border-black max-h-[60vh] overflow-y-scroll">
+      <div className="border border-black max-h-[70vh] overflow-y-scroll">
         <table className="table table-zebra">
           <thead className="sticky top-0 border-2 bg-gray-700 z-10">
             <tr className=" text-gray-100">

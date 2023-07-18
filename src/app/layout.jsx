@@ -60,6 +60,13 @@ export default function RootLayout({ children }) {
             </button>
             <button
               className={`block w-full py-2 px-4 ${
+                currentPath === "/trocadeplano" ? "bg-gray-500" : "bg-neutral"
+              } hover:bg-gray-500`}
+            >
+              <Link href="/trocadeplano">Troca de Plano</Link>
+            </button>
+            <button
+              className={`block w-full py-2 px-4 ${
                 currentPath === "/listramais" ? "bg-gray-500" : "bg-neutral"
               } hover:bg-gray-500`}
             >
@@ -97,7 +104,7 @@ export default function RootLayout({ children }) {
                 Carros
               </Link>
             </button>
-            <footer className="bg-neutral text-white py-4 px-8 text-center">
+            <footer className="absolute bottom-0  text-white py-4 px-8 text-center">
               <p className="text-sm">Felipe Justus</p>
               <p className="text-sm">
                 &copy; {currentYear} All Rights Reserved.

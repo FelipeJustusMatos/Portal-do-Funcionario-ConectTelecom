@@ -9,7 +9,7 @@ export default function PlanoPage() {
           <Image
             src={image5}
             alt="Cadastrar Ramal"
-            className="w-screen h-[50vh]"
+            className="w-screen -mt-2 rounded-tl-3xl h-[30vh] object-fill"
           />
         </figure>
       </main>

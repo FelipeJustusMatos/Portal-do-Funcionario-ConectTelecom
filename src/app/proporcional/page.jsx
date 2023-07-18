@@ -80,27 +80,33 @@ export default function ProporcionalPage() {
             <Image
               src={image5}
               alt="Cadastrar Ramal"
-              className="w-screen rounded-tl-3xl -mt-2 h-[40vh] object-cover"
+              className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
             />
           </figure>
         </li>
       </ul>
       <div className=" items-center text-center mt-12 h-[50vh]">
-        <div className="text-center ">
-          <ul>
-            <li className="inline-block">
-              <label htmlFor="date_ini">Data Inicial:</label>
+        <div className="text-center bg-gray-700 ">
+          <ul className="grid grid-cols-2 ">
+            <li className=" grid justify-center  ">
+              <label className="text-white" htmlFor="date_ini ">
+                Data Inicial:
+              </label>
               <input
                 onChange={countDays}
+                className="border border-black rounded-lg"
                 name="date_ini"
                 id="date_ini"
                 type="date"
                 autoFocus
               />
             </li>
-            <li className="inline-block">
-              <label htmlFor="date_end">Data Final:</label>
+            <li className=" grid justify-center ">
+              <label className="text-white" htmlFor="date_end">
+                Data Final:
+              </label>
               <input
+                className="border  border-black  rounded-lg"
                 onChange={countDays}
                 name="date_end"
                 id="date_end"
@@ -109,13 +115,13 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="text-center ">
+        <div className="text-center pt-3 ">
           <ul>
             <li className="inline-block">
               <input
                 onChange={countDays}
                 type="radio"
-                className="btn-check"
+                className="btn-check "
                 name="options-outlined"
                 id="incluirdia"
                 defaultChecked
@@ -141,8 +147,8 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="text-center">
-          <ul>
+        <div className="text-center pt-3">
+          <ul className="grid grid-cols-2">
             <li className="inline-block">
               <div className="input-group mb-3">
                 <span className="input-group-text">VALOR - PLANO:</span>
@@ -150,7 +156,7 @@ export default function ProporcionalPage() {
                   id="plano"
                   onKeyUp={contarpelovalor}
                   type="number"
-                  className="form-control"
+                  className="form-control border border-black"
                   placeholder="Ex: 60"
                   step="any"
                 />
@@ -163,7 +169,7 @@ export default function ProporcionalPage() {
                   id="days"
                   onKeyUp={contarpelosdias}
                   type="number"
-                  className="form-control"
+                  className="form-control border border-black"
                   onKeyPress={(event) =>
                     event.charCode >= 48 && event.charCode <= 57
                   }
@@ -172,21 +178,21 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="pt-5">
           <strong>
             <p id="formula">{formula}</p>
           </strong>
           <strong>
-            <h2 id="res">
+            <h2 className=" bg-green-700 text-white" id="res">
               Resultado: <br />
               {resultado}
             </h2>
           </strong>
         </div>
-        <div className="text-center ">
+        <div className="text-center pt-5">
           <button
             id="btn"
-            className="btn bg-blue-700 text-white hover:text-black hover:bg-white btn-success"
+            className="btn bg-blue-900 border-none text-white hover:text-black hover:bg-white btn-success"
             type="button"
             onClick={countDays}
           >
