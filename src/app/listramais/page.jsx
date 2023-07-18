@@ -14,7 +14,7 @@ const ListRamaisPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/ramais");
+        const response = await fetch("/api/ramais");
         const data = await response.json();
         setData(data);
       } catch (error) {

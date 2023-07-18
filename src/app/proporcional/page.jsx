@@ -1,7 +1,7 @@
 "use client";
 import "tailwindcss/tailwind.css";
 import { useState } from "react";
-import image5 from "../../../public/img/simples.webp";
+import image5 from "../../../public/img/proppc.webp";
 import Image from "next/image";
 
 export default function ProporcionalPage() {
@@ -76,15 +76,15 @@ export default function ProporcionalPage() {
     <form name="form_main" className="grid bg-light rounded-tl-3xl">
       <div className=" items-center text-center  h-[50vh]">
         <figure className="-mt-1 ">
-          <Image
-            src={image5}
+          <img
+            src="https://conect.oficialcomdesconto.com/wp-content/uploads/2022/09/proppc.webp"
             alt="Cadastrar Ramal"
-            className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
+            className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-cover"
           />
         </figure>
         <div className="text-center justify-center items-center self-center  ">
-          <ul className="grid grid-cols-2 ">
-            <li className=" grid justify-center  ">
+          <ul className="flex mt-10 justify-center ">
+            <li className=" grid mr-3  ">
               <label className="" htmlFor="date_ini ">
                 Data Inicial:
               </label>
@@ -97,7 +97,7 @@ export default function ProporcionalPage() {
                 autoFocus
               />
             </li>
-            <li className=" grid justify-center ">
+            <li className=" grid ml-3 ">
               <label className="" htmlFor="date_end">
                 Data Final:
               </label>
@@ -111,9 +111,9 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="text-center flex justify-center m-10 bg-pt-3 ">
-          <ul className="grid grid-cols-2 ">
-            <li className=" grid justify-center  ">
+        <div className="text-center mt-5 flex justify-center m-3 bg-pt-3 ">
+          <ul className="flex gap-5 mr-4 grid-cols-2 ">
+            <li className=" grid  mr-16 ">
               <label
                 className="btn btn-outline-success text-white bg-green-800
                 hover:border-green-800 hover:text-black hover:bg-blue-300"
@@ -122,7 +122,7 @@ export default function ProporcionalPage() {
                 INCLUIR DATA INICIAL
               </label>
             </li>
-            <li className=" grid justify-center  ">
+            <li className=" grid -ml-16">
               <label
                 className="btn border border-red-500 text-red-500 btn-outline-danger
                 hover:bg-red-500 hover:text-black"
@@ -133,8 +133,8 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="text-center pt-3">
-          <ul className="grid grid-cols-2">
+        <div className="text-center mt-5 pt-3">
+          <ul className="flex justify-center gap-5 grid-cols-2">
             <li className="inline-block">
               <div className="input-group mb-3">
                 <span className="input-group-text">VALOR - PLANO:</span>
@@ -164,7 +164,7 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="pt-5">
+        <div className=" mt-10">
           <strong>
             <p id="formula">{formula}</p>
           </strong>
@@ -178,7 +178,7 @@ export default function ProporcionalPage() {
         <div className="text-center pt-5">
           <button
             id="btn"
-            className="btn bg-blue-900 border-none text-white hover:text-black hover:bg-white btn-success"
+            className="btn bg-blue-900 border-none text-white hover:bg-green-800 hover:text-black btn-success"
             type="button"
             onClick={countDays}
           >

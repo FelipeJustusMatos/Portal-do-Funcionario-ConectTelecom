@@ -112,9 +112,7 @@ export default function RootLayout({ children }) {
               >
                 <p>Felipe Justus</p>
               </Link>
-              <p className="text-sm">
-                &copy; {currentYear} All Rights Reserved.
-              </p>
+              <p className="text-sm">&copy; {currentYear} Portal</p>
             </footer>
           </div>
 
