@@ -15,11 +15,11 @@ export default function Home() {
   };
   return (
     <>
-      <main className="flex w-full -mt-2 h-[100vh] bg-light">
+      <main className="flex w-full  -mt-2 h-[100vh] bg-light">
         <div className="w-full flex flex-col justify-center items-center">
           <div className="grid grid-cols-3 gap-10 h-auto">
             {/* card 1 */}
-            <div className="card card-compact  bg-white w-72 shadow-xl">
+            <div className="card card-compact  w-72 shadow-xl">
               <figure>
                 <Image
                   src={image5}
@@ -35,7 +35,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => router.push("/proporcional")}
-                    className="btn w-full bg-blue-700 hover:bg-gray-500 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
                     Acessar
                   </button>
@@ -62,7 +62,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => router.push("/plano")}
-                    className="btn w-full bg-blue-700 text-white hover:bg-gray-500 hover:text-black"
+                    className="btn w-full bg-blue-700 text-white hover:bg-green-700 "
                   >
                     Acessar
                   </button>
@@ -89,7 +89,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => router.push("/listramais")}
-                    className="btn w-full bg-blue-700 hover:bg-gray-500 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
                     Acessar
                   </button>
@@ -116,7 +116,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => router.push("/ramais")}
-                    className="btn w-full bg-blue-700 hover:bg-gray-500 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
                     Acessar
                   </button>
@@ -145,7 +145,7 @@ export default function Home() {
                     onClick={() =>
                       handleButtonClick("https://conect-veiculos.netlify.app/")
                     }
-                    className="btn w-full bg-blue-700 hover:bg-gray-500 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
                     Acessar
                   </button>
@@ -172,7 +172,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => handleButtonClick("http://10.0.9.20/")}
-                    className="btn w-full bg-blue-700 hover:bg-gray-500 text-white hover:text-black"
+                    className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
                     Acessar
                   </button>
