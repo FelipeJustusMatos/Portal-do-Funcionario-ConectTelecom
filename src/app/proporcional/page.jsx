@@ -73,28 +73,24 @@ export default function ProporcionalPage() {
   };
 
   return (
-    <form name="form_main" className="grid ">
-      <ul>
-        <li>
-          <figure className="-mt-1">
-            <Image
-              src={image5}
-              alt="Cadastrar Ramal"
-              className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
-            />
-          </figure>
-        </li>
-      </ul>
-      <div className=" items-center text-center mt-12 h-[50vh]">
-        <div className="text-center bg-gray-700 ">
+    <form name="form_main" className="grid bg-light rounded-tl-3xl">
+      <div className=" items-center text-center  h-[50vh]">
+        <figure className="-mt-1 ">
+          <Image
+            src={image5}
+            alt="Cadastrar Ramal"
+            className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
+          />
+        </figure>
+        <div className="text-center justify-center items-center self-center  ">
           <ul className="grid grid-cols-2 ">
             <li className=" grid justify-center  ">
-              <label className="text-white" htmlFor="date_ini ">
+              <label className="" htmlFor="date_ini ">
                 Data Inicial:
               </label>
               <input
                 onChange={countDays}
-                className="border border-black rounded-lg"
+                className="border border-black rounded-md"
                 name="date_ini"
                 id="date_ini"
                 type="date"
@@ -102,11 +98,11 @@ export default function ProporcionalPage() {
               />
             </li>
             <li className=" grid justify-center ">
-              <label className="text-white" htmlFor="date_end">
+              <label className="" htmlFor="date_end">
                 Data Final:
               </label>
               <input
-                className="border  border-black  rounded-lg"
+                className="border border-black rounded-md"
                 onChange={countDays}
                 name="date_end"
                 id="date_end"
@@ -115,31 +111,21 @@ export default function ProporcionalPage() {
             </li>
           </ul>
         </div>
-        <div className="text-center pt-3 ">
-          <ul>
-            <li className="inline-block">
-              <input
-                onChange={countDays}
-                type="radio"
-                className="btn-check "
-                name="options-outlined"
-                id="incluirdia"
-                defaultChecked
-              />
-              <label className="btn btn-outline-success" htmlFor="incluirdia">
+        <div className="text-center flex justify-center m-10 bg-pt-3 ">
+          <ul className="grid grid-cols-2 ">
+            <li className=" grid justify-center  ">
+              <label
+                className="btn btn-outline-success text-white bg-green-800
+                hover:border-green-800 hover:text-black hover:bg-blue-300"
+                htmlFor="incluirdia"
+              >
                 INCLUIR DATA INICIAL
               </label>
             </li>
-            <li className="inline-block">
-              <input
-                onChange={countDays}
-                type="radio"
-                className="btn-check"
-                name="options-outlined"
-                id="danger-outlined"
-              />
+            <li className=" grid justify-center  ">
               <label
-                className="btn btn-outline-danger"
+                className="btn border border-red-500 text-red-500 btn-outline-danger
+                hover:bg-red-500 hover:text-black"
                 htmlFor="danger-outlined"
               >
                 NÃO INCLUIR
@@ -183,7 +169,7 @@ export default function ProporcionalPage() {
             <p id="formula">{formula}</p>
           </strong>
           <strong>
-            <h2 className=" bg-green-700 text-white" id="res">
+            <h2 className="text-green-700 text-3xl" id="res">
               Resultado: <br />
               {resultado}
             </h2>

@@ -30,11 +30,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="flex">
-          <div className="bg-neutral text-white  w-sidebar">
-            <div className="flex flex-initial">
+        <div className="flex  ">
+          <div className="bg-neutral pt-5 flex flex-col col-span-1 items-center text-white w-sidebar">
+            <div>
               <a
-                className="btn btn-ghost normal-case rounded-none w-full  text-md font-bold"
+                className="btn  btn-ghost normal-case rounded-none w-full  text-md font-bold"
                 href="/"
               >
                 Portal do funcionario
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
               </a>
             </div>
             <button
-              className={`block w-full py-2 px-4 shadow- ${
+              className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 shadow- ${
                 currentPath === "/" ? "bg-gray-500 text-white" : "bg-neutral"
               } hover:bg-gray-500`}
               onClick={handleClick}
@@ -52,35 +52,35 @@ export default function RootLayout({ children }) {
               <Link href="/">Home</Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "/proporcional" ? "bg-gray-500" : "bg-neutral"
               } hover:bg-gray-500`}
             >
               <Link href="/proporcional">Proporcional</Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "/trocadeplano" ? "bg-gray-500" : "bg-neutral"
               } hover:bg-gray-500`}
             >
               <Link href="/trocadeplano">Troca de Plano</Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "/listramais" ? "bg-gray-500" : "bg-neutral"
               } hover:bg-gray-500`}
             >
               <Link href="/listramais">Lista de Ramais</Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "/ramais" ? "bg-gray-500" : "bg-neutral"
               } hover:bg-gray-500`}
             >
               <Link href="/ramais">Cadastrar Ramais</Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "http://10.0.9.20/"
                   ? "bg-gray-500"
                   : "bg-neutral"
@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
               </Link>
             </button>
             <button
-              className={`block w-full py-2 px-4 ${
+              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
                 currentPath === "https://conect-veiculos.netlify.app/login"
                   ? "bg-gray-500"
                   : "bg-neutral"
@@ -105,7 +105,13 @@ export default function RootLayout({ children }) {
               </Link>
             </button>
             <footer className="absolute bottom-0  text-white py-4 px-8 text-center">
-              <p className="text-sm">Felipe Justus</p>
+              <Link
+                className="text-sm"
+                href={"https://dev-felipe-justus-portfolio.netlify.app"}
+                target="_blank"
+              >
+                <p>Felipe Justus</p>
+              </Link>
               <p className="text-sm">
                 &copy; {currentYear} All Rights Reserved.
               </p>

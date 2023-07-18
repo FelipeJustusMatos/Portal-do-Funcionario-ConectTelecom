@@ -15,7 +15,7 @@ export default function Home() {
   };
   return (
     <>
-      <main className="flex w-full -mt-2 h-[95vh] bg-light">
+      <main className="flex w-full -mt-2 h-[100vh] bg-light">
         <div className="w-full flex flex-col justify-center items-center">
           <div className="grid grid-cols-3 gap-10 h-auto">
             {/* card 1 */}
