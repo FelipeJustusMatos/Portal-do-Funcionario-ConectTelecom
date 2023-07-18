@@ -1,10 +1,101 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import image5 from "../../../public/img/troca_plano.webp";
 
-export default function PlanoPage() {
+export default function CalculadoraProporcional() {
+  const [dateIni, setDateIni] = useState("");
+  const [dateMid, setDateMid] = useState("");
+  const [dateEnd, setDateEnd] = useState("");
+  const [planoAntigo, setPlanoAntigo] = useState("");
+  const [planoNovo, setPlanoNovo] = useState("");
+  const [resultado, setResultado] = useState(0);
+
+  const contarPlano = () => {
+    const diffAntigo = new Date(dateMid) - new Date(dateIni);
+    const diffNovo = new Date(dateEnd) - new Date(dateMid);
+
+    if (diffAntigo === 0) {
+      const dateIgualPlanoNovoValue = Number(planoNovo).toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL",
+        }
+      );
+      setResultado(dateIgualPlanoNovoValue);
+    } else if (diffAntigo === 0) {
+      const dateIgualPlanoAntigoValue = Number(planoAntigo).toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL",
+        }
+      );
+      setResultado(dateIgualPlanoAntigoValue);
+    } else if (new Date(dateIni) > new Date(dateMid)) {
+      setResultado("R$ 0,00");
+    } else if (new Date(dateEnd) < new Date(dateIni)) {
+      setResultado("R$ 0,00");
+    } else if (new Date(dateEnd) < new Date(dateMid)) {
+      setResultado("R$ 0,00");
+    } else {
+      const incluirdia = document.getElementById("incluirdia").checked;
+
+      let daysAntigo;
+      let daysNovo;
+
+      if (incluirdia) {
+        daysAntigo = Math.floor(diffAntigo / (1000 * 60 * 60 * 24) - 1);
+        daysNovo = Math.floor(diffNovo / (1000 * 60 * 60 * 24) + 1);
+      } else {
+        daysAntigo = Math.floor(diffAntigo / (1000 * 60 * 60 * 24));
+        daysNovo = Math.floor(diffNovo / (1000 * 60 * 60 * 24));
+      }
+
+      const resultadoAntigo = (planoAntigo / 30) * daysAntigo;
+      const resultadoNovo = (planoNovo / 30) * daysNovo + resultadoAntigo;
+      const reaisNovo = resultadoNovo.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+
+      if (isNaN(resultadoNovo)) {
+        setResultado("R$ 0,00");
+      } else {
+        setResultado(reaisNovo);
+      }
+    }
+  };
+
+  const handleDateIniChange = (event) => {
+    setDateIni(event.target.value);
+    contarPlano();
+  };
+
+  const handleDateMidChange = (event) => {
+    setDateMid(event.target.value);
+    contarPlano();
+  };
+
+  const handleDateEndChange = (event) => {
+    setDateEnd(event.target.value);
+    contarPlano();
+  };
+
+  const handlePlanoAntigoChange = (event) => {
+    setPlanoAntigo(event.target.value);
+    contarPlano();
+  };
+
+  const handlePlanoNovoChange = (event) => {
+    setPlanoNovo(event.target.value);
+    contarPlano();
+  };
+
   return (
-    <>
-      <main className="flex  w-full  ">
+    <div className="flex  rounded-tl-3xl w-full -mt-2 h-[100vh] bg-light">
+      <div className="w-full flex flex-col justify-center items-center">
         <figure className="-mt-1">
           <Image
             src={image5}
@@ -12,7 +103,162 @@ export default function PlanoPage() {
             className="w-screen -mt-2 rounded-tl-3xl h-[30vh] object-fill"
           />
         </figure>
-      </main>
-    </>
+
+        <div className="mx-auto max-w-md">
+          <form className="mt-8 space-y-6">
+            <div className=" flex flex-initial justify-center gap-5 text-center">
+              <div>
+                <label htmlFor="date_ini" className="font-medium">
+                  ÚLTIMO VENCIMENTO:
+                </label>
+                <input
+                  onChange={handleDateIniChange}
+                  value={dateIni}
+                  id="date_ini"
+                  name="date_ini"
+                  type="date"
+                  className="border border-black rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  autoFocus
+                />
+              </div>
+
+              <div>
+                <label htmlFor="date_mid" className="font-medium">
+                  DATA DA SOLICITAÇÃO:
+                </label>
+                <input
+                  onChange={handleDateMidChange}
+                  value={dateMid}
+                  id="date_mid"
+                  name="date_mid"
+                  type="date"
+                  className="border border-black rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="date_end" className="font-medium">
+                  PRÓXIMO VENCIMENTO:
+                </label>
+                <input
+                  onChange={handleDateEndChange}
+                  value={dateEnd}
+                  id="date_end"
+                  name="date_end"
+                  type="date"
+                  className="border border-black rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                />
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <h5 className="text-center font-medium">
+                SOLICITOU EM QUAL TURNO?
+              </h5>
+              <div className="flex justify-center mt-2 space-x-2">
+                <label
+                  htmlFor="incluirdia"
+                  className="btn text-white bg-green-800
+                  hover:border-green-800 hover:text-black hover:bg-blue-300 btn-outline-success"
+                >
+                  <input
+                    onChange={contarPlano}
+                    type="radio"
+                    className=" btn-check"
+                    name="options-outlined"
+                    id="incluirdia"
+                    autoComplete="off"
+                    checked
+                  />
+                  MANHÃ
+                </label>
+
+                <label
+                  htmlFor="danger-outlined"
+                  className="btn bg-blue-700 hover:bg-green-700 text-white btn-outline-danger"
+                >
+                  <input
+                    onChange={contarPlano}
+                    type="radio"
+                    className="btn-check"
+                    name="options-outlined"
+                    id="danger-outlined"
+                    autoComplete="off"
+                  />
+                  TARDE / NOITE
+                </label>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div>
+                <label htmlFor="plano_antigo" className="font-medium">
+                  VALOR DO PLANO ANTIGO:
+                </label>
+                <input
+                  onChange={handlePlanoAntigoChange}
+                  value={planoAntigo}
+                  id="plano_antigo"
+                  name="plano_antigo"
+                  type="number"
+                  className="border border-black rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  placeholder="Ex: 60"
+                  step="any"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="plano_novo" className="font-medium">
+                  VALOR DO PLANO NOVO:
+                </label>
+                <input
+                  onChange={handlePlanoNovoChange}
+                  value={planoNovo}
+                  id="plano_novo"
+                  name="plano_novo"
+                  type="number"
+                  className="border border-black rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  placeholder="Ex: 80"
+                  step="any"
+                />
+              </div>
+            </div>
+
+            <div>
+              <strong>
+                <p id="formulas" />
+              </strong>
+              <div className="alert alert-success">
+                <h4 className="alert-heading">FÓRMULA:</h4>
+                <hr />
+                <br />
+                <p id="formula"></p>
+                <div id="aviso" />
+              </div>
+
+              <strong className="flex justify-center">
+                <h2 className="text-green-700 text-3xl" id="res">
+                  Resultado: <br />
+                  {resultado}
+                </h2>
+              </strong>
+            </div>
+
+            <div className="flex justify-center space-x-4">
+              <button
+                className="btn btn-green btn-success"
+                type="button"
+                onClick={contarPlano}
+              >
+                CALCULAR
+              </button>
+              <button className="btn btn-outline-secondary" type="reset">
+                LIMPAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }

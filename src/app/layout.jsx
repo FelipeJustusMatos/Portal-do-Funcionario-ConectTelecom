@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation"; // Importe o useRouter corretamente
+import { notFound, usePathname, useRouter } from "next/navigation"; // Importe o useRouter corretamente
 import "./globals.css";
 import { Inter } from "next/font/google";
 import imglogo from "../../public/img/logoportal.svg";
@@ -43,67 +43,78 @@ export default function RootLayout({ children }) {
                 </figure>
               </a>
             </div>
-            <button
-              className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 shadow- ${
-                currentPath === "/" ? "bg-gray-500 text-white" : "bg-neutral"
-              } hover:bg-gray-500`}
-              onClick={handleClick}
-            >
-              <Link href="/">Home</Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "/proporcional" ? "bg-gray-500" : "bg-neutral"
-              } hover:bg-gray-500`}
-            >
-              <Link href="/proporcional">Proporcional</Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "/trocadeplano" ? "bg-gray-500" : "bg-neutral"
-              } hover:bg-gray-500`}
-            >
-              <Link href="/trocadeplano">Troca de Plano</Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "/listramais" ? "bg-gray-500" : "bg-neutral"
-              } hover:bg-gray-500`}
-            >
-              <Link href="/listramais">Lista de Ramais</Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "/ramais" ? "bg-gray-500" : "bg-neutral"
-              } hover:bg-gray-500`}
-            >
-              <Link href="/ramais">Cadastrar Ramais</Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "http://10.0.9.20/"
-                  ? "bg-gray-500"
-                  : "bg-neutral"
-              } hover:bg-gray-500`}
-            >
-              <Link href="http://10.0.9.20/" target="_blank">
+            <Link href="/">
+              <button
+                className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 shadow- ${
+                  currentPath === "/" ? "bg-gray-500 text-white" : "bg-neutral"
+                } hover:bg-gray-500`}
+                onClick={handleClick}
+              >
+                Home
+              </button>
+            </Link>
+            <Link href="/proporcional">
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "/proporcional" ? "bg-gray-500" : "bg-neutral"
+                } hover:bg-gray-500`}
+              >
+                Proporcional
+              </button>
+            </Link>
+            <Link href="/trocadeplano">
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "/trocadeplano" ? "bg-gray-500" : "bg-neutral"
+                } hover:bg-gray-500`}
+              >
+                Troca de Plano
+              </button>
+            </Link>
+            <Link href="/listramais">
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "/listramais" ? "bg-gray-500" : "bg-neutral"
+                } hover:bg-gray-500`}
+              >
+                Lista de Ramais
+              </button>
+            </Link>
+            {/* <Link href="/ramais">
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "/ramais" ? "bg-gray-500" : "bg-neutral"
+                } hover:bg-gray-500`}
+                onClick={() => notFound()}
+              >
+                Cadastrar Ramais
+              </button>
+            </Link> */}
+            <Link href="http://10.0.9.20/" target="_blank">
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "http://10.0.9.20/"
+                    ? "bg-gray-500"
+                    : "bg-neutral"
+                } hover:bg-gray-500`}
+              >
                 API Suporte
-              </Link>
-            </button>
-            <button
-              className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
-                currentPath === "https://conect-veiculos.netlify.app/login"
-                  ? "bg-gray-500"
-                  : "bg-neutral"
-              } hover:bg-gray-500`}
+              </button>{" "}
+            </Link>
+            <Link
+              href="https://conect-veiculos.netlify.app/login"
+              target="_blank"
             >
-              <Link
-                href="https://conect-veiculos.netlify.app/login"
-                target="_blank"
+              <button
+                className={`rounded-md block mb-1  w-[25vh] py-2 px-4 ${
+                  currentPath === "https://conect-veiculos.netlify.app/login"
+                    ? "bg-gray-500"
+                    : "bg-neutral"
+                } hover:bg-gray-500`}
               >
                 Carros
-              </Link>
-            </button>
+              </button>
+            </Link>
             <footer className="absolute bottom-0  text-white py-4 px-8 text-center">
               <Link
                 className="text-sm"
