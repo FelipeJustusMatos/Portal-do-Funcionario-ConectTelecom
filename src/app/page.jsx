@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <div className="flex w-full min-h-screen bg-light">
         <div className="w-full flex flex-col justify-center   items-center">
-          <div className="grid grid-cols-3 gap-10 lg:gap-3  md:grid-cols-2 lg:overflow-y-scroll">
+          <div className="grid grid-cols-3 gap-10 lg:gap-3   md:grid-cols-2 lg:overflow-y-scroll">
             {/* card 1 */}
             <div className="card card-compact bg-base-100  w-72 shadow-xl lg:w-60  ">
               <figure>
