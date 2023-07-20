@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} `}>
         <div className="flex  ">
-          <div className="bg-neutral pt-5 flex flex-col col-span-1 items-center text-white w-sidebar lg:hidden">
+          <div className="bg-neutral pt-5 flex flex-col col-span-1 items-center text-white w-sidebar md:hidden">
             <div>
               <a
                 className="btn  btn-ghost normal-case rounded-none w-full  text-md font-bold"
@@ -125,8 +125,8 @@ export default function RootLayout({ children }) {
               <p className="text-sm">&copy; {currentYear} Portal</p>
             </footer>
           </div>
-          <div className="flex md:hidden xl:hidden 2xl:hidden">
-            <div className="flex col-span-3 items-center w-full text-white bg-neutral xl:hidden 2xl:hidden">
+          <head className="flex  ">
+            <div className="flex col-span-3 items-center w-full text-white bg-neutral dm:hidden">
               <button
                 className="flex-col w-1/3 justify-center items-center hidden lg:flex"
                 onClick={handleClick}
@@ -196,7 +196,7 @@ export default function RootLayout({ children }) {
                 </motion.div>
               ) : null}
             </div>
-          </div>
+          </head>
 
           <main className="flex flex-initial ml-10 pt-2 h-[100vh] rounded-tl-3xl w-full md:ml-0 md:pt-0">
             {children}

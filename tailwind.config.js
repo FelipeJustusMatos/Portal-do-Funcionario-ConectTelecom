@@ -32,7 +32,7 @@ module.exports = {
 
       lg: { max: "1120px" },
       // => @media (max-width: 1023px) { ... }
-
+      dm: { min: "1010px" },
       md: { max: "1010px" },
       // => @media (max-width: 767px) { ... }
 
