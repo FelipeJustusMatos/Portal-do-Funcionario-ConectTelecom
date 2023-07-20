@@ -15,11 +15,11 @@ export default function Home() {
   };
   return (
     <>
-      <main className="flex w-full  -mt-2 h-[100vh] bg-light">
-        <div className="w-full flex flex-col justify-center items-center">
-          <div className="grid grid-cols-3 gap-10 h-auto">
+      <div className="flex w-full min-h-screen bg-light">
+        <div className="w-full flex flex-col justify-center   items-center">
+          <div className="grid grid-cols-3 gap-10 lg:gap-3  md:grid-cols-2 lg:overflow-y-scroll">
             {/* card 1 */}
-            <div className="card card-compact  w-72 shadow-xl">
+            <div className="card card-compact bg-base-100  w-72 shadow-xl lg:w-60  ">
               <figure>
                 <Image
                   src={image5}
@@ -30,7 +30,7 @@ export default function Home() {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">Proporcional Simples</h2>
-                <p>Calcule o valor proporcional entre duas ⠀⠀</p>
+                <p className="">Calcule o valor proporcional entre duas ⠀⠀</p>
                 <div className="card-actions justify-center">
                   <button
                     type="button"
@@ -43,7 +43,7 @@ export default function Home() {
               </div>
             </div>
             {/* card 2 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60 ">
               <figure>
                 <Image
                   src={image6}
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
             </div>
             {/* card 3 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60 ">
               <figure>
                 <Image
                   src={image4}
@@ -81,10 +81,7 @@ export default function Home() {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">Lista de Ramais</h2>
-                <p>
-                  Ache o ramal rapidamente por nome ou local usando a caixa
-                  "pesquisar"
-                </p>
+                <p>Ache o ramal rapidamente por nome ou local</p>
                 <div className="card-actions justify-center">
                   <button
                     type="button"
@@ -97,7 +94,7 @@ export default function Home() {
               </div>
             </div>
             {/* col 1 row 2 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60 ">
               <figure>
                 <Image
                   src={image2}
@@ -124,7 +121,7 @@ export default function Home() {
               </div>
             </div>
             {/* col 2 row 2 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60 ">
               <figure>
                 <Image
                   src={image}
@@ -153,7 +150,7 @@ export default function Home() {
               </div>
             </div>
             {/* col 3 row 2 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60 ">
               <figure>
                 <Image
                   src={image3}
@@ -181,7 +178,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
