@@ -95,12 +95,12 @@ export default function CalculadoraProporcional() {
 
   return (
     <div className="flex  rounded-tl-3xl sm:rounded-none w-full -mt-2 sm:mt-14 h-[100vh] bg-light">
-      <div className="w-full flex flex-col justify-center   items-center">
-        <figure className="-mt-1  sm:mt-16">
+      <div className="w-screen flex flex-col justify-center   items-center">
+        <figure className="-mt-1  ">
           <Image
             src={image5}
             alt="Cadastrar Ramal"
-            className="w-screen -mt-2 rounded-tl-3xl sm:rounded-none h-[30vh] object-fill"
+            className="w-screen -mt-2 rounded-tl-3xl sm:rounded-none sm:h-[20vh] h-[30vh] object-fill"
           />
         </figure>
 
@@ -229,7 +229,7 @@ export default function CalculadoraProporcional() {
               <strong>
                 <p id="formulas" />
               </strong>
-              <div className="alert alert-success">
+              <div className="alert alert-success ">
                 <h4 className="alert-heading">FÓRMULA:</h4>
                 <hr />
                 <br />
@@ -245,7 +245,7 @@ export default function CalculadoraProporcional() {
               </strong>
             </div>
 
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4  ">
               <button
                 className="btn btn-green btn-success"
                 type="button"
@@ -253,7 +253,7 @@ export default function CalculadoraProporcional() {
               >
                 CALCULAR
               </button>
-              <button className="btn btn-outline-secondary" type="reset">
+              <button className="btn btn-outline-secondary " type="reset">
                 LIMPAR
               </button>
             </div>
