@@ -28,6 +28,105 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
+        <head className="flex  ">
+          <div className="flex col-span-3 items-center w-full text-white bg-neutral dm:hidden mb-2">
+            <button
+              className="flex-col w-1/3 justify-center items-center hidden lg:flex"
+              onClick={handleClick}
+            >
+              <span
+                className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm  ${
+                  isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                }`}
+              ></span>
+              <span
+                className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm my-0.5 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm ${
+                  isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+                }`}
+              ></span>
+            </button>
+            <Link href="/" className="flex w-full items-center justify-center">
+              <p className="w-full text-center ">Portal do Funcionario</p>
+            </Link>
+
+            <div className="w-1/3 justify-center">
+              <figure className="mr-2 ">
+                <Image
+                  className="justify-center"
+                  src={imglogo}
+                  alt="logo"
+                  width={40}
+                  height={80}
+                />
+              </figure>
+            </div>
+            {isOpen ? (
+              <motion.div
+                initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2
+          -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-sm py-32"
+              >
+                <nav className="flex items-center flex-col justify-center">
+                  <Link href="/">
+                    <button
+                      className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 shadow- "
+                      } hover:bg-gray-500`}
+                      onClick={handleClick}
+                    >
+                      Home
+                    </button>
+                  </Link>
+                  <Link href="/proporcional">
+                    <button
+                      className={`rounded-md block mb-1  w-[25vh] py-2 px-4 "
+                      } hover:bg-gray-500`}
+                    >
+                      Proporcional
+                    </button>
+                  </Link>
+                  <Link href="/trocadeplano">
+                    <button
+                      className={`rounded-md block mb-1  w-[25vh] py-2 px-4 "
+                      } hover:bg-gray-500`}
+                    >
+                      Troca de Plano
+                    </button>
+                  </Link>
+                  <Link href="/listramais">
+                    <button
+                      className={`rounded-md block mb-1  w-[25vh] py-2 px-4  hover:bg-gray-500`}
+                    >
+                      Lista de Ramais
+                    </button>
+                  </Link>
+                  <Link href="http://10.0.9.20/" target="_blank">
+                    <button
+                      className={`rounded-md block mb-1  w-[25vh] py-2 p-4`}
+                    >
+                      API Suporte
+                    </button>{" "}
+                  </Link>
+                  <Link
+                    href="https://conect-veiculos.netlify.app/login"
+                    target="_blank"
+                  >
+                    <button
+                      className={`rounded-md block mb-1  w-[25vh] py-2 px-4`}
+                    >
+                      Carros
+                    </button>
+                  </Link>
+                </nav>
+              </motion.div>
+            ) : null}
+          </div>
+        </head>
         <div className="flex  ">
           <div className="bg-neutral pt-5 flex flex-col col-span-1 items-center text-white w-sidebar md:hidden">
             <div>
@@ -125,80 +224,8 @@ export default function RootLayout({ children }) {
               <p className="text-sm">&copy; {currentYear} Portal</p>
             </footer>
           </div>
-          <head className="flex  ">
-            <div className="flex col-span-3 items-center w-full text-white bg-neutral dm:hidden">
-              <button
-                className="flex-col w-1/3 justify-center items-center hidden lg:flex"
-                onClick={handleClick}
-              >
-                <span
-                  className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm  ${
-                    isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-                  }`}
-                ></span>
-                <span
-                  className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm my-0.5 ${
-                    isOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                ></span>
-                <span
-                  className={`bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm ${
-                    isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-                  }`}
-                ></span>
-              </button>
-              <p className="w-1/3">Portal do Funcionario</p>
 
-              <div className="w-1/3 justify-center">
-                <figure className="mr-2 ">
-                  <Image
-                    className="justify-center"
-                    src={imglogo}
-                    alt="logo"
-                    width={40}
-                    height={80}
-                  />
-                </figure>
-              </div>
-              {isOpen ? (
-                <motion.div
-                  initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2
-          -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-sm py-32"
-                >
-                  <nav className="flex items-center flex-col justify-center">
-                    <Link
-                      href="/"
-                      title="Demo"
-                      className=""
-                      toggle={handleClick}
-                    />
-                    <Link
-                      href="/"
-                      title="Demo"
-                      className=""
-                      toggle={handleClick}
-                    />
-                    <Link
-                      href="/"
-                      title="Demo"
-                      className=""
-                      toggle={handleClick}
-                    />
-                    <Link
-                      href="/"
-                      title="Demo"
-                      className=""
-                      toggle={handleClick}
-                    />
-                  </nav>
-                </motion.div>
-              ) : null}
-            </div>
-          </head>
-
-          <main className="flex flex-initial ml-10 pt-2 h-[100vh] rounded-tl-3xl w-full md:ml-0 md:pt-0">
+          <main className="flex flex-initial ml-10 pt-2 h-[100vh] rounded-tl-3xl w-screen md:ml-0 md:pt-0">
             {children}
           </main>
         </div>

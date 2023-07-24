@@ -88,7 +88,7 @@ const ListRamaisPage = () => {
             <Image
               src={image}
               alt="Cadastrar Ramal"
-              className="w-screen rounded-tl-3xl -mt-2 h-[30vh] object-fill"
+              className="w-screen rounded-t-3xl sm:rounded-none xs:rounded-none -mt-2 h-[30vh] object-fill"
             />
           </figure>
         </li>
