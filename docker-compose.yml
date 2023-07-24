@@ -1,10 +1,10 @@
-version 3.9
+version: "3.9"
 
-services
-  funcionariofrontend
-    restart always
-    container_name FUNCIONARIO-NEXT-FRONTEND
-    build .
-    ports
+services:
+  api:
+  frontend:
+    restart: always
+    container_name: FUNCIONARIO-NEXT-FRONTEND
+    build: ./
+    ports:
       - "3001:3001"
-
