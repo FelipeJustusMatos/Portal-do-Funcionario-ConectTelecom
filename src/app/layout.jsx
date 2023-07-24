@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
                 <nav className="flex items-center flex-col justify-center">
                   <Link href="/">
                     <button
-                      className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 shadow- "
+                      className={`rounded-md block  mb-1 mt-5 w-[25vh] py-2 px-4 "
                       } hover:bg-gray-500`}
                       onClick={handleClick}
                     >
@@ -85,7 +85,8 @@ export default function RootLayout({ children }) {
                   <Link href="/proporcional">
                     <button
                       className={`rounded-md block mb-1  w-[25vh] py-2 px-4 "
-                      } hover:bg-gray-500`}
+                     `}
+                      onClick={handleClick}
                     >
                       Proporcional
                     </button>
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
                     <button
                       className={`rounded-md block mb-1  w-[25vh] py-2 px-4 "
                       } hover:bg-gray-500`}
+                      onClick={handleClick}
                     >
                       Troca de Plano
                     </button>
@@ -101,6 +103,7 @@ export default function RootLayout({ children }) {
                   <Link href="/listramais">
                     <button
                       className={`rounded-md block mb-1  w-[25vh] py-2 px-4  hover:bg-gray-500`}
+                      onClick={handleClick}
                     >
                       Lista de Ramais
                     </button>
@@ -108,6 +111,7 @@ export default function RootLayout({ children }) {
                   <Link href="http://10.0.9.20/" target="_blank">
                     <button
                       className={`rounded-md block mb-1  w-[25vh] py-2 p-4`}
+                      onClick={handleClick}
                     >
                       API Suporte
                     </button>{" "}
@@ -118,6 +122,7 @@ export default function RootLayout({ children }) {
                   >
                     <button
                       className={`rounded-md block mb-1  w-[25vh] py-2 px-4`}
+                      onClick={handleClick}
                     >
                       Carros
                     </button>
