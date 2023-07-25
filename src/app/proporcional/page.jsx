@@ -145,7 +145,7 @@ export default function ProporcionalPage() {
           </ul>
         </div>
         <div className="text-center mt-5 pt-3">
-          <ul className="flex justify-center gap-5 grid-cols-2 sm:flex-col sm:col-span-1 ">
+          <ul className="flex justify-center items-center gap-5 grid-cols-2 sm:flex-col sm:col-span-1 ">
             <li className="inline-block">
               <div className="input-group mb-3 sm:mb-0 justify-center ">
                 <span className="input-group-text ">

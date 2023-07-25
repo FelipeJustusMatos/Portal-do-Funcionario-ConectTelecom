@@ -230,7 +230,7 @@ export default function RootLayout({ children }) {
             </footer>
           </div>
 
-          <main className="flex flex-initial min-h-screen rounded-tl-3xl w-screen md:ml-0 md:pt-0">
+          <main className="flex flex-initial ml-10 sm:ml-0 min-h-screen rounded-tl-3xl w-screen md:ml-0 md:pt-0">
             {children}
           </main>
         </div>

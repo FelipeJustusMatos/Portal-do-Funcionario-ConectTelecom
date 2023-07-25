@@ -61,7 +61,7 @@ export default function Home() {
                 <div className="card-actions justify-center">
                   <button
                     type="button"
-                    onClick={() => router.push("/plano")}
+                    onClick={() => router.push("/trocadeplano")}
                     className="btn w-full bg-blue-700 text-white hover:bg-green-700 "
                   >
                     Acessar

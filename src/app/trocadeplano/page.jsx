@@ -94,13 +94,13 @@ export default function CalculadoraProporcional() {
   };
 
   return (
-    <div className="flex  rounded-tl-3xl sm:rounded-none w-full -mt-2 sm:mt-14 h-[100vh] bg-light">
+    <div className="flex  rounded-tl-3xl sm:rounded-none w-full   min-h-screen bg-light">
       <div className="w-screen flex flex-col justify-center   items-center">
-        <figure className="-mt-1  ">
+        <figure className="  ">
           <Image
             src={image5}
             alt="Cadastrar Ramal"
-            className="w-screen -mt-2 rounded-tl-3xl sm:rounded-none sm:h-[20vh] h-[30vh] object-fill"
+            className="w-screen -mt-2 sm:mt-0 rounded-tl-3xl sm:rounded-none md:rounded-none sm:h-[20vh] h-[30vh] object-fill"
           />
         </figure>
 
