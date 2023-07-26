@@ -81,22 +81,22 @@ const ListRamaisPage = () => {
   }
 
   return (
-    <div className="flex mx-auto md:min-w-screen">
-      <div className="md:min-w-screen">
-        <figure className="-mt-1  md:mt-0">
+    <div className="flex rounded-tl-3xl mx-auto min-w-screen">
+      <div className="min-w-screen">
+        <figure className="min-w-screen md:mt-0">
           <Image
             src={image}
             alt="Cadastrar Ramal"
-            className="w-screen  rounded-t-3xl md:rounded-none xs:rounded-none -mt-2 md:mt-0 h-[30vh]  object-fill"
+            className="w-screen min-w-screen rounded-tl-3xl md:rounded-none xs:rounded-none   h-[30vh]  object-fill"
           />
         </figure>
 
-        <div className="border border-black max-h-[70vh]  xs:max-w-sm overflow-y-scroll">
+        <div className="border border-black max-h-[70vh]   xs:max-w-screen overflow-y-scroll">
           <div className="table sm:grid justify-center items-center table-zebra">
             <div className="table-header-group sticky top-0 border-2 sm:pb-2 bg-gray-700 z-10">
-              <div className="table-row sm:grid sm:grid-cols-3  text-gray-100">
+              <div className="table-row sm:mb-2 sm:mt-2 sm:grid sm:grid-cols-3  text-gray-100">
                 <div
-                  className="table-cell text-center"
+                  className="table-cell dm:w-1/5 text-center"
                   scope="col"
                   onClick={() => handleSort("ramal")}
                 >
@@ -106,9 +106,8 @@ const ListRamaisPage = () => {
                   )}
                 </div>
                 <div
-                  className="table-cell text-center"
+                  className="table-cell dm:w-1/5 text-center"
                   scope="col"
-                  colSpan="2"
                   onClick={() => handleSort("nome")}
                 >
                   Nome{" "}
@@ -116,7 +115,7 @@ const ListRamaisPage = () => {
                     <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
                   )}
                 </div>
-                <div className="table-cell sm:hidden  items-center justify-start">
+                <div className="table-cell dm:w-1/5 sm:hidden  items-center justify-start">
                   <select
                     id="locationSelect"
                     value={selectedLocation}
@@ -132,9 +131,8 @@ const ListRamaisPage = () => {
                   </select>
                 </div>
                 <div
-                  className="table-cell text-center"
+                  className="table-cell dm:w-1/5  text-center"
                   scope="col"
-                  colSpan="2"
                   onClick={() => handleSort("local")}
                 >
                   Local{" "}
@@ -143,7 +141,7 @@ const ListRamaisPage = () => {
                   )}
                 </div>
 
-                <div className="table-cell sm:hidden text-black">
+                <div className="table-cell dm:w-1/5 sm:hidden text-black">
                   <input
                     type="text"
                     value={searchValue}
@@ -152,15 +150,14 @@ const ListRamaisPage = () => {
                     placeholder="Pesquisar por nome"
                   />
                 </div>
-              </div>{" "}
-              {/* mobile */}
-              <div className="ms:hidden w-full table-row sm:grid sm:grid-cols-2 sm:justify-center sm:items-center">
-                <div className="table-cell sm:flex  sm:items-center sm:justify-center">
+              </div>
+              <div className="ms:hidden w-full table-row  sm:grid sm:grid-cols-2 sm:justify-center sm:items-center">
+                <div className="table-cell  sm:flex  sm:items-center sm:justify-center">
                   <select
                     id="locationSelect"
                     value={selectedLocation}
                     onChange={handleLocationChange}
-                    className="w-1/2 ml-20 sm:w-4/5 sm:h-[23px] sm:ml-0 text-black"
+                    className=" ml-20 sm:w-4/5 sm:h-[23px] sm:ml-0 text-black"
                   >
                     <option value="">Selecione um Local</option>
                     {locations.map((location) => (
@@ -171,14 +168,16 @@ const ListRamaisPage = () => {
                   </select>
                 </div>
                 {/* pesquisa */}
-                <div className="table-cell sm:flex  sm:items-center sm:justify-center ">
-                  <input
-                    type="text"
-                    value={searchValue}
-                    onChange={handleSearchChange}
-                    className=" w-1/2 sm:w-4/5 sm:h-[25px] ml-0 p-1  border text-black border-black"
-                    placeholder="Pesquisar por nome"
-                  />
+                <div className="table-cell  sm:flex  sm:items-center sm:justify-center ">
+                  <div className="flex justify-self-center items-center">
+                    <input
+                      type="text"
+                      value={searchValue}
+                      onChange={handleSearchChange}
+                      className="sm:w-4/5 sm:h-[25px]  p-1  border text-black border-black"
+                      placeholder="Pesquisar por nome"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -188,8 +187,8 @@ const ListRamaisPage = () => {
                   <td className="w-1/5" colSpan="1">
                     {item.ramal}
                   </td>
-                  <td colSpan="3">{item.nome}</td>
-                  <td colSpan="3">{item.local}</td>
+                  <td colSpan="2">{item.nome}</td>
+                  <td colSpan="4">{item.local}</td>
                 </tr>
               ))}
             </tbody>
