@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} `}>
         <head className="flex  h-full">
-          <div className="flex col-span-3 h-full  items-center w-full text-white dm:hidden ">
+          <div className="flex col-span-3 h-full bg-neutral items-center w-full text-white dm:hidden ">
             <button
               className="flex-col w-1/3 justify-center items-center  lg:flex"
               onClick={handleClick}
