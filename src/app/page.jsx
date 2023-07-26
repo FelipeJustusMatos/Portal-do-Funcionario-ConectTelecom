@@ -15,11 +15,11 @@ export default function Home() {
   };
   return (
     <>
-      <div className="flex w-full min-h-screen bg-light">
-        <div className="w-full flex flex-col justify-center items-center">
-          <div className="grid grid-cols-3 gap-10 lg:gap-3 md:grid-cols-2 sm:grid-cols-1 lg:overflow-y-scroll">
+      <div className="flex w-full  min-h-screen bg-light">
+        <div className="w-full flex flex-col mt-5 justify-center items-center lg:overflow-y-scroll">
+          <div className="grid grid-cols-3 gap-10 lg:gap-3 md:grid-cols-2 sm:grid-cols-1 ">
             {/* card 1 */}
-            <div className="card card-compact bg-base-100 w-72 shadow-xl lg:w-60  ">
+            <div className="card card-compact  bg-base-100 w-72 shadow-xl lg:w-60  ">
               <figure>
                 <Image
                   src={image5}
@@ -61,7 +61,7 @@ export default function Home() {
                 <div className="card-actions justify-center">
                   <button
                     type="button"
-                    onClick={() => router.push("/plano")}
+                    onClick={() => router.push("/trocadeplano")}
                     className="btn w-full bg-blue-700 text-white hover:bg-green-700 "
                   >
                     Acessar

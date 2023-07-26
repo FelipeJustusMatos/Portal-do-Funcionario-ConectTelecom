@@ -74,16 +74,13 @@ export default function ProporcionalPage() {
   };
 
   return (
-    <form
-      name="form_main"
-      className="grid bg-light rounded-tl-3xl sm:rounded-none"
-    >
-      <div className=" items-center text-center  h-[50vh] w-screen">
-        <figure className="-mt-1 sm:hidden">
+    <div className="flex rounded-tl-3xl mx-auto min-w-screen">
+      <div className=" min-w-screen">
+        <figure className="sm:hidden">
           <Image
             src={image5}
             alt="Cadastrar Ramal"
-            className="w-screen rounded-tl-3xl md:rounded-none -mt-2 h-[30vh] object-cover"
+            className="w-screen rounded-tl-3xl md:rounded-none h-[30vh] object-cover"
           />
         </figure>
         <figure className="-mt-1 ms:hidden">
@@ -145,7 +142,7 @@ export default function ProporcionalPage() {
           </ul>
         </div>
         <div className="text-center mt-5 pt-3">
-          <ul className="flex justify-center gap-5 grid-cols-2 sm:flex-col sm:col-span-1 ">
+          <ul className="flex justify-center items-center gap-5 grid-cols-2 sm:flex-col sm:col-span-1 ">
             <li className="inline-block">
               <div className="input-group mb-3 sm:mb-0 justify-center ">
                 <span className="input-group-text ">
@@ -200,6 +197,6 @@ export default function ProporcionalPage() {
           </button>
         </div>
       </div>
-    </form>
+    </div>
   );
 }

@@ -81,79 +81,119 @@ const ListRamaisPage = () => {
   }
 
   return (
-    <div className="container mx-auto">
-      <ul>
-        <li>
-          <figure className="-mt-1">
-            <Image
-              src={image}
-              alt="Cadastrar Ramal"
-              className="w-screen rounded-t-3xl sm:rounded-none xs:rounded-none -mt-2 h-[30vh] object-fill"
-            />
-          </figure>
-        </li>
-      </ul>
-      <div className="border border-black max-h-[70vh] overflow-y-scroll">
-        <table className="table table-zebra">
-          <thead className="sticky top-0 border-2 bg-gray-700 z-10">
-            <tr className=" text-gray-100">
-              <th scope="col" onClick={() => handleSort("ramal")}>
-                Ramal{" "}
-                {sortBy === "ramal" && (
-                  <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
-                )}
-              </th>
-              <th scope="col" colSpan="2" onClick={() => handleSort("nome")}>
-                Nome{" "}
-                {sortBy === "nome" && (
-                  <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
-                )}
-              </th>
-              <th>
-                <select
-                  id="locationSelect"
-                  value={selectedLocation}
-                  onChange={handleLocationChange}
-                  className="w-1/2 ml-20 text-black"
-                >
-                  <option value="">Selecione um Local</option>
-                  {locations.map((location) => (
-                    <option key={location} value={location}>
-                      {location}
-                    </option>
-                  ))}
-                </select>
-              </th>
-              <th scope="col" colSpan="2" onClick={() => handleSort("local")}>
-                Local{" "}
-                {sortBy === "local" && (
-                  <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
-                )}
-              </th>
+    <div className="flex rounded-tl-3xl mx-auto min-w-screen">
+      <div className="min-w-screen">
+        <figure className="min-w-screen md:mt-0">
+          <Image
+            src={image}
+            alt="Cadastrar Ramal"
+            className="w-screen min-w-screen rounded-tl-3xl md:rounded-none xs:rounded-none   h-[30vh]  object-fill"
+          />
+        </figure>
 
-              <th className="text-black">
-                <input
-                  type="text"
-                  value={searchValue}
-                  onChange={handleSearchChange}
-                  className="ml-20 p-1 border border-black"
-                  placeholder="Pesquisar por nome"
-                />
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData?.map((item) => (
-              <tr className="w-full " key={item.ramal}>
-                <td className="w-1/5" colSpan="1">
-                  {item.ramal}
-                </td>
-                <td colSpan="3">{item.nome}</td>
-                <td colSpan="3">{item.local}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="border border-black max-h-[70vh]   xs:max-w-screen overflow-y-scroll">
+          <div className="table sm:grid justify-center items-center table-zebra">
+            <div className="table-header-group sticky top-0 border-2 sm:pb-2 bg-gray-700 z-10">
+              <div className="table-row sm:mb-2 sm:mt-2 sm:grid sm:grid-cols-3  text-gray-100">
+                <div
+                  className="table-cell dm:w-1/5 text-center"
+                  scope="col"
+                  onClick={() => handleSort("ramal")}
+                >
+                  Ramal{" "}
+                  {sortBy === "ramal" && (
+                    <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
+                  )}
+                </div>
+                <div
+                  className="table-cell dm:w-1/5 text-center"
+                  scope="col"
+                  onClick={() => handleSort("nome")}
+                >
+                  Nome{" "}
+                  {sortBy === "nome" && (
+                    <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
+                  )}
+                </div>
+                <div className="table-cell dm:w-1/5 sm:hidden  items-center justify-start">
+                  <select
+                    id="locationSelect"
+                    value={selectedLocation}
+                    onChange={handleLocationChange}
+                    className="w-1/2 ml-20 text-center text-black"
+                  >
+                    <option value="">Selecione um Local</option>
+                    {locations.map((location) => (
+                      <option key={location} value={location}>
+                        {location}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div
+                  className="table-cell dm:w-1/5  text-center"
+                  scope="col"
+                  onClick={() => handleSort("local")}
+                >
+                  Local{" "}
+                  {sortBy === "local" && (
+                    <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
+                  )}
+                </div>
+
+                <div className="table-cell dm:w-1/5 sm:hidden text-black">
+                  <input
+                    type="text"
+                    value={searchValue}
+                    onChange={handleSearchChange}
+                    className="ml-20 p-1 border border-black"
+                    placeholder="Pesquisar por nome"
+                  />
+                </div>
+              </div>
+              <div className="ms:hidden w-full table-row  sm:grid sm:grid-cols-2 sm:justify-center sm:items-center">
+                <div className="table-cell  sm:flex  sm:items-center sm:justify-center">
+                  <select
+                    id="locationSelect"
+                    value={selectedLocation}
+                    onChange={handleLocationChange}
+                    className=" ml-20 sm:w-4/5 sm:h-[23px] sm:ml-0 text-black"
+                  >
+                    <option value="">Selecione um Local</option>
+                    {locations.map((location) => (
+                      <option key={location} value={location}>
+                        {location}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                {/* pesquisa */}
+                <div className="table-cell  sm:flex  sm:items-center sm:justify-center ">
+                  <div className="flex justify-self-center items-center">
+                    <input
+                      type="text"
+                      value={searchValue}
+                      onChange={handleSearchChange}
+                      className="sm:w-4/5 sm:h-[25px]  p-1  border text-black border-black"
+                      placeholder="Pesquisar por nome"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <tbody>
+              {filteredData?.map((item) => (
+                <tr className="w-full " key={item.ramal}>
+                  <td className="w-1/5" colSpan="1">
+                    {item.ramal}
+                  </td>
+                  <td colSpan="2">{item.nome}</td>
+                  <td colSpan="4">{item.local}</td>
+                </tr>
+              ))}
+            </tbody>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -28,10 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
-        <head className="flex  ">
-          <div className="flex col-span-3 items-center w-full text-white bg-neutral dm:hidden mb-2">
+        <head className="flex  h-full">
+          <div className="flex col-span-3 h-full bg-neutral items-center w-full text-white dm:hidden ">
             <button
-              className="flex-col w-1/3 justify-center items-center hidden lg:flex"
+              className="flex-col w-1/3 justify-center items-center  lg:flex"
               onClick={handleClick}
             >
               <span
@@ -230,7 +230,7 @@ export default function RootLayout({ children }) {
             </footer>
           </div>
 
-          <main className="flex flex-initial ml-10 pt-2 h-[100vh] rounded-tl-3xl w-screen md:ml-0 md:pt-0">
+          <main className="flex flex-initial ml-10 sm:ml-0 min-h-screen rounded-tl-3xl w-screen md:ml-0 md:pt-0">
             {children}
           </main>
         </div>
