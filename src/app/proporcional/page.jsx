@@ -179,8 +179,11 @@ export default function ProporcionalPage() {
           <strong>
             <p id="formula">{formula}</p>
           </strong>
-          <strong>
-            <h2 className="text-green-700 text-3xl" id="res">
+          <strong className="flex items-center justify-center">
+            <h2
+              className="flex text-green-700 items-center justify-center text-3xl"
+              id="res"
+            >
               Resultado: <br />
               {resultado}
             </h2>
