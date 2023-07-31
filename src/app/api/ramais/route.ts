@@ -33,6 +33,11 @@ export async function GET(request: Request) {
       local: "AGENDAMENTO / COMPRAS",
     },
     {
+      ramal: "210",
+      nome: "KEVELIN FERNANDA",
+      local: "COBRANÇA",
+    },
+    {
       ramal: "211",
       nome: "ANA CAROLINA ALVES DE JESUS",
       local: "COBRANÇA",
@@ -110,19 +115,14 @@ export async function GET(request: Request) {
       local: "FINANCEIRO",
     },
     {
-      ramal: "202",
-      nome: "KEVELIN FERNANDA",
-      local: "CORANÇA",
-    },
-    {
-      ramal: "203",
+      ramal: "208",
       nome: "MARIELLE SANTOS",
-      local: "FINANCEIRO",
+      local: "COBRANÇA",
     },
     {
-      ramal: "204",
+      ramal: "209",
       nome: "MARIA EDUARDA GARCIA",
-      local: "FINANCEIRO",
+      local: "COBRANÇA",
     },
     {
       ramal: "205",
