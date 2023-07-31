@@ -122,9 +122,15 @@ const ListRamaisPage = () => {
                     onChange={handleLocationChange}
                     className="w-1/2 ml-20 text-center text-black"
                   >
-                    <option value="">Selecione um Local</option>
+                    <option className="text-left" value="">
+                      Selecione um Local
+                    </option>
                     {locations.map((location) => (
-                      <option key={location} value={location}>
+                      <option
+                        className="text-left "
+                        key={location}
+                        value={location}
+                      >
                         {location}
                       </option>
                     ))}

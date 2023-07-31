@@ -64,13 +64,13 @@ export async function GET(request: Request) {
     },
     {
       ramal: "123",
-      nome: "TAILSON ANDRADE GALVÃO (RESPONSÁVEL PELO SETOR)",
+      nome: "TAILSON ANDRADE GALVÃO",
       local: "CONTABILIDADE",
     },
 
     {
       ramal: "218",
-      nome: "JEFFERSON FRANCISCO (RESPONSÁVEL PELO SETOR)",
+      nome: "JEFFERSON FRANCISCO",
       local: "DAC",
     },
     {
@@ -78,11 +78,7 @@ export async function GET(request: Request) {
       nome: "MILENA NASCIMENTO",
       local: "DAC",
     },
-    {
-      ramal: "220",
-      nome: "BEATRIZ ALVES",
-      local: "DAC",
-    },
+
     {
       ramal: "258",
       nome: "ISABELLE",
@@ -116,7 +112,7 @@ export async function GET(request: Request) {
     {
       ramal: "202",
       nome: "KEVELIN FERNANDA",
-      local: "FINANCEIRO",
+      local: "CORANÇA",
     },
     {
       ramal: "203",
@@ -146,7 +142,7 @@ export async function GET(request: Request) {
     {
       ramal: "120",
       nome: "JON FRANK",
-      local: "GESTÃO DE FROTAS",
+      local: "DAC",
     },
     {
       ramal: "245",
@@ -160,7 +156,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "247",
-      nome: "JOSÉ IANDRO (ANALISTA)",
+      nome: "JOSÉ IANDRO",
       local: "NOC / DTI",
     },
     {
