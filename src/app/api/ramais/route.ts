@@ -357,12 +357,12 @@ export async function GET(request: Request) {
     },
     {
       ramal: "243",
-      nome: "RAFAELA MELO (RECEPÇÃO)",
+      nome: " SAMUEL MOTA ( RECEPÇÃO )",
       local: "LAJE",
     },
     {
       ramal: "244",
-      nome: "GABRIELA MELO + EDILENE MOTA (RECEPÇÃO)",
+      nome: "GABRIELA MELO (RECEPÇÃO)",
       local: "LAJE",
     },
     {
