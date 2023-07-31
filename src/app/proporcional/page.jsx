@@ -127,6 +127,13 @@ export default function ProporcionalPage() {
                 hover:border-green-800 hover:text-black hover:bg-blue-300"
                 htmlFor="incluirdia"
               >
+                <input
+                  type="radio"
+                  className="btn-check"
+                  name="options-outlined"
+                  id="danger-outlined"
+                  autoComplete="off"
+                />
                 INCLUIR DATA INICIAL
               </label>
             </li>
@@ -136,6 +143,13 @@ export default function ProporcionalPage() {
                 hover:bg-red-500 hover:text-black"
                 htmlFor="danger-outlined"
               >
+                <input
+                  type="radio"
+                  className="btn-check"
+                  name="options-outlined"
+                  id="danger-outlined"
+                  autoComplete="off"
+                />
                 NÃO INCLUIR
               </label>
             </li>

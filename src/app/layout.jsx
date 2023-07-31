@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${inter.className} `}>
+      <div className={`${inter.className} `}>
         <head className="flex  h-full">
           <div className="flex col-span-3 h-full bg-neutral items-center w-full text-white dm:hidden ">
             <button
@@ -234,7 +234,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
-      </body>
+      </div>
     </html>
   );
 }

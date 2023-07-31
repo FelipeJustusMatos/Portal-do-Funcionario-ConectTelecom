@@ -33,6 +33,11 @@ export async function GET(request: Request) {
       local: "AGENDAMENTO / COMPRAS",
     },
     {
+      ramal: "210",
+      nome: "KEVELIN FERNANDA",
+      local: "COBRANÇA",
+    },
+    {
       ramal: "211",
       nome: "ANA CAROLINA ALVES DE JESUS",
       local: "COBRANÇA",
@@ -64,13 +69,13 @@ export async function GET(request: Request) {
     },
     {
       ramal: "123",
-      nome: "TAILSON ANDRADE GALVÃO (RESPONSÁVEL PELO SETOR)",
+      nome: "TAILSON ANDRADE GALVÃO",
       local: "CONTABILIDADE",
     },
 
     {
       ramal: "218",
-      nome: "JEFFERSON FRANCISCO (RESPONSÁVEL PELO SETOR)",
+      nome: "JEFFERSON FRANCISCO",
       local: "DAC",
     },
     {
@@ -78,11 +83,7 @@ export async function GET(request: Request) {
       nome: "MILENA NASCIMENTO",
       local: "DAC",
     },
-    {
-      ramal: "220",
-      nome: "BEATRIZ ALVES",
-      local: "DAC",
-    },
+
     {
       ramal: "258",
       nome: "ISABELLE",
@@ -114,19 +115,14 @@ export async function GET(request: Request) {
       local: "FINANCEIRO",
     },
     {
-      ramal: "202",
-      nome: "KEVELIN FERNANDA",
-      local: "FINANCEIRO",
-    },
-    {
-      ramal: "203",
+      ramal: "208",
       nome: "MARIELLE SANTOS",
-      local: "FINANCEIRO",
+      local: "COBRANÇA",
     },
     {
-      ramal: "204",
+      ramal: "209",
       nome: "MARIA EDUARDA GARCIA",
-      local: "FINANCEIRO",
+      local: "COBRANÇA",
     },
     {
       ramal: "205",
@@ -146,7 +142,7 @@ export async function GET(request: Request) {
     {
       ramal: "120",
       nome: "JON FRANK",
-      local: "GESTÃO DE FROTAS",
+      local: "DAC",
     },
     {
       ramal: "245",
@@ -160,7 +156,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "247",
-      nome: "JOSÉ IANDRO (ANALISTA)",
+      nome: "JOSÉ IANDRO",
       local: "NOC / DTI",
     },
     {
@@ -361,12 +357,12 @@ export async function GET(request: Request) {
     },
     {
       ramal: "243",
-      nome: "RAFAELA MELO (RECEPÇÃO)",
+      nome: " SAMUEL MOTA ( RECEPÇÃO )",
       local: "LAJE",
     },
     {
       ramal: "244",
-      nome: "GABRIELA MELO + EDILENE MOTA (RECEPÇÃO)",
+      nome: "GABRIELA MELO (RECEPÇÃO)",
       local: "LAJE",
     },
     {
