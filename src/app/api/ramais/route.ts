@@ -140,7 +140,7 @@ export async function GET(request: Request) {
       local: "GESTÃO DE FROTAS",
     },
     {
-      ramal: "120",
+      ramal: "220",
       nome: "JON FRANK",
       local: "DAC",
     },
