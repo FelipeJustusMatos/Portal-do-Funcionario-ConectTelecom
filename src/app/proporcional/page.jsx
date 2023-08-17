@@ -37,7 +37,7 @@ const DateSubtraction = () => {
   const calculateResult = () => {
     const days = includeDay ? calculateDaysPassed() + 1 : calculateDaysPassed();
     const result = (plano / 30) * days;
-    return result.toFixed(2);
+    return isNaN(result) ? "0.00" : result.toFixed(2);
   };
 
   const formatCurrency = (value) => {
@@ -49,9 +49,7 @@ const DateSubtraction = () => {
 
   return (
     <>
-      {" "}
       <div className="min-w-screen">
-        {" "}
         <figure className="sm:hidden">
           <Image
             src={image5}
@@ -122,7 +120,7 @@ const DateSubtraction = () => {
                 <span className="input-group-text">Dias Passados:</span>
                 <input
                   type="number"
-                  className="text-center"
+                  className="form-control border border-black text-center"
                   value={calculateDaysPassed()}
                   readOnly
                 />
@@ -132,16 +130,18 @@ const DateSubtraction = () => {
         </div>
         <div>
           <ul>
-            <li className="border rounded-r-lg text-center">
-              <h1 className="w-full ">Resultado</h1>
+            <li className=" mt-5 text-center">
+              <p className="w-full text-2xl font-bold text-green-900">
+                Resultado
+              </p>
               <input
                 type="text"
-                className="text-center"
+                className="text-center font-bold text-2xl text-green-800"
                 value={formatCurrency(calculateResult())}
                 readOnly
               />
             </li>
-            <li className="text-center">
+            <li className="mt-5 text-center">
               <p>
                 Fórmula: ({plano} / 30) * {calculateDaysPassed()} ={" "}
                 {formatCurrency(calculateResult())}
