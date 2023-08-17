@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const DateSubtraction = () => {
-  const [startDate, setStartDate] = React.useState("");
-  const [endDate, setEndDate] = React.useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [plano, setPlano] = useState(0);
+  const [includeDay, setIncludeDay] = useState(true);
 
   const handleStartDateChange = (e) => {
     setStartDate(e.target.value);
@@ -13,12 +15,33 @@ const DateSubtraction = () => {
     setEndDate(e.target.value);
   };
 
+  const handlePlanoChange = (e) => {
+    setPlano(parseFloat(e.target.value));
+  };
+
+  const toggleIncludeDay = () => {
+    setIncludeDay(!includeDay);
+  };
+
   const calculateDaysPassed = () => {
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
     const timeDiff = endDateObj.getTime() - startDateObj.getTime();
     const daysPassed = Math.floor(timeDiff / (1000 * 3600 * 24));
     return daysPassed;
+  };
+
+  const calculateResult = () => {
+    const days = includeDay ? calculateDaysPassed() + 1 : calculateDaysPassed();
+    const result = (plano / 30) * days;
+    return result.toFixed(2);
+  };
+
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(value);
   };
 
   return (
@@ -46,8 +69,33 @@ const DateSubtraction = () => {
           />
         </li>
         <li className="border rounded-r-lg">
-          <label className="">Valor do Plano</label>
-          <input id="plano" type="number" className="text-center" />
+          <label>Valor do Plano</label>
+          <input
+            id="plano"
+            type="number"
+            className="text-center"
+            onChange={handlePlanoChange}
+          />
+        </li>
+        <li>
+          <button onClick={toggleIncludeDay}>
+            {includeDay ? "Não Incluir Dia" : "Incluir Dia"}
+          </button>
+        </li>
+        <li className="border rounded-r-lg">
+          <label>Valor Calculado</label>
+          <input
+            type="text"
+            className="text-center"
+            value={formatCurrency(calculateResult())}
+            readOnly
+          />
+        </li>
+        <li>
+          <p>
+            Fórmula: ({plano} / 30) * {calculateDaysPassed()} ={" "}
+            {formatCurrency(calculateResult())}
+          </p>
         </li>
       </ul>
     </div>
