@@ -90,11 +90,14 @@ const DateSubtraction = () => {
           <ul className="flex gap-5 mr-4 grid-cols-2 ">
             <li>
               <button
-                className="btn btn-outline-success text-white bg-green-800
-                hover:border-green-800 hover:text-black hover:bg-blue-300"
+                className={`btn ${
+                  includeDay
+                    ? "btn-outline-success bg-slate-100 text-red-500 border-red-500  hover:border-red-500 hover:text-black hover:bg-blue-300"
+                    : "btn-outline-danger bg-green-800 text-white hover:border-green-800 hover:text-black "
+                }`}
                 onClick={toggleIncludeDay}
               >
-                {includeDay ? "Não Incluir Dia" : "Incluir Dia"}
+                {includeDay ? "Não Incluir Dia Inicial" : "Incluir Dia Inicial"}
               </button>
             </li>
           </ul>
