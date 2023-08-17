@@ -146,7 +146,7 @@ const DateSubtraction = () => {
             </li>
             <li className="mt-5 text-center">
               <p>
-                Fórmula: ({plano} / 30) * {calculateDaysPassed()} ={" "}
+                Fórmula: ({plano} ÷ 30) x {calculateDaysPassed()} ={" "}
                 {formatCurrency(calculateResult())}
               </p>
             </li>
