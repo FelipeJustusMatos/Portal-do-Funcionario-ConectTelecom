@@ -49,7 +49,7 @@ const DateSubtraction = () => {
 
   return (
     <>
-      <div className="min-w-screen">
+      <div className="min-w-screen rounded-tl-3xl bg-light">
         <figure className="sm:hidden">
           <Image
             src={image5}
