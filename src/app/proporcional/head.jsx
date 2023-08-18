@@ -1,7 +1,7 @@
-export default function ProporcionalHead() {
+export default function PlanoHead() {
   return (
     <>
-      <title>Porporcional Simples</title>
+      <title>Proporcional Simples</title>
     </>
   );
 }

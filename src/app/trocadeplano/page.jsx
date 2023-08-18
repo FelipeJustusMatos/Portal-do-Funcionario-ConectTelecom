@@ -94,8 +94,8 @@ export default function CalculadoraProporcional() {
   };
 
   return (
-    <div className="flex rounded-tl-3xl mx-auto min-w-screen">
-      <div className="min-w-screen">
+    <div className="flex  mx-auto min-w-screen">
+      <div className="min-w-screen rounded-tl-3xl bg-light">
         <figure className="min-w-screen md:mt-0">
           <Image
             src={image5}

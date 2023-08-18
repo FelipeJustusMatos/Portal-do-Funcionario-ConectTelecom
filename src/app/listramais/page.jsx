@@ -81,8 +81,8 @@ const ListRamaisPage = () => {
   }
 
   return (
-    <div className="flex rounded-tl-3xl mx-auto min-w-screen">
-      <div className="min-w-screen">
+    <div className="flex  ">
+      <div className="min-w-screenmx-auto min-w-screen">
         <figure className="min-w-screen md:mt-0">
           <Image
             src={image}
