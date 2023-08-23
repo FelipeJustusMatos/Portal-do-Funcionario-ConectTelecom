@@ -1,10 +1,14 @@
 version: "3.9"
 
+networks:
+  nginxmanagerconecttelecom_default:
+    external: true
+  
 services:
-  api:
   frontend:
     restart: always
     container_name: FUNCIONARIO-NEXT-FRONTEND
     build: ./
-    ports:
-      - "3001:3001"
+    networks:
+      - nginxmanagerconecttelecom_default
+  
