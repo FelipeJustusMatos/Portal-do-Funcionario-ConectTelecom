@@ -4,17 +4,17 @@ export async function GET(request: Request) {
   return NextResponse.json([
     {
       ramal: "242",
-      nome: " JAIRO",
+      nome: "JAIRO",
       local: "COPA",
     },
     {
       ramal: "242",
-      nome: "  ZENY",
+      nome: "ZENY",
       local: "COPA",
     },
     {
       ramal: "242",
-      nome: " ZÉ",
+      nome: "ZÉ",
       local: "COPA",
     },
     {
@@ -357,7 +357,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "243",
-      nome: " SAMUEL MOTA ( RECEPÇÃO )",
+      nome: "SAMUEL MOTA ( RECEPÇÃO )",
       local: "LAJE",
     },
     {
