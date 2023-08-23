@@ -30,7 +30,7 @@ export async function GET(request: Request) {
     {
       ramal: "270",
       nome: "GABRIELE PEREIRA",
-      local: "AGENDAMENTO / COMPRAS",
+      local: "AGENDAMENTO",
     },
     {
       ramal: "210",
@@ -54,7 +54,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "215",
-      nome: "DAIANE MODESTO (REPONSÁVEL PELO SETOR)",
+      nome: "DAIANE MODESTO",
       local: "COBRANÇA",
     },
     {
@@ -147,152 +147,152 @@ export async function GET(request: Request) {
     {
       ramal: "245",
       nome: "TIAGO REALE",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "246",
       nome: "JOSÉ TIAGO",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "247",
       nome: "JOSÉ IANDRO",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "248",
       nome: "NIXON",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "249",
       nome: "MAYCON",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "250",
       nome: "GOY",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "251",
       nome: "EZEQUIEL",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "252",
       nome: "FELIPE",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "253",
       nome: "ISRAEL FRANÇA",
-      local: "NOC / DTI",
+      local: "NOC",
     },
     {
       ramal: "260",
       nome: "ADRIANA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "261",
       nome: "TAIANA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "262",
       nome: "ADRINE SILVA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "263",
       nome: "CARINE VIEIRA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "264",
       nome: "CARINA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "265",
       nome: "LISANDRA PEREIRA",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "266",
       nome: "LUANA BARRETO",
-      local: "RECEPÇÃO VALENÇA",
+      local: "RECEPÇÃO",
     },
     {
       ramal: "100",
       nome: "JOAO VIANEY",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "101",
       nome: "HENRIQUE TELES",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "103",
       nome: "VIRGINIA",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "104",
       nome: "YASMIN SERAFIN",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "106",
       nome: "PAI DO JOAQUIM (JEFERSON SANTANA)",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "107",
       nome: "PRISCILA",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "108",
       nome: "JESSICA ANUNCIACAO",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "110",
       nome: "LUCIA LEONARDA",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "111",
-      nome: "LEONARDO FONSECA (RESPONSÁVEL PELO SETOR)",
-      local: "SUPORTE / CALLCENTER",
+      nome: "LEONARDO FONSECA",
+      local: "CALLCENTER",
     },
     {
       ramal: "113",
       nome: "FRANCIELLE GAMA",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "114",
       nome: "ADRIA CRYSTINA",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "115",
       nome: "CAMILA FIGUEIREDO",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "116",
       nome: "CADU ANDRADE (EDVAN DAS 18:00H ÀS 00:00H)",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "254",
       nome: "DANILO/SAMIR",
-      local: "SUPORTE / CALLCENTER",
+      local: "CALLCENTER",
     },
     {
       ramal: "272",
@@ -301,53 +301,53 @@ export async function GET(request: Request) {
     },
     {
       ramal: "235",
-      nome: "RAFAELA ANJOS (RECEPÇÃO)",
+      nome: "RAFAELA ANJOS",
       local: "BOIPEBA",
     },
     {
       ramal: "274",
-      nome: "VANESSA CRUZ (RECEPÇÃO)",
+      nome: "VANESSA CRUZ",
       local: "CAIRU",
     },
     {
       ramal: "267",
-      nome: "LARISSA SANTOS (AGENDAMENTO E RECEPÇÃO)",
+      nome: "LARISSA SANTOS",
       local: "CAMAMU",
     },
     {
       ramal: "269",
-      nome: "DIVILE RAMOS (FINANCEIRO)",
+      nome: "DIVILE RAMOS",
       local: "CAMAMU",
     },
     {
       ramal: "232",
-      nome: "MAIANA TORRES ( AGENDAMENTO)",
+      nome: "MAIANA TORRES ",
       local: "CRUZEIRO DE LAJE",
     },
 
     {
       ramal: "233",
-      nome: "ANATÁLIA (RECEPÇÃO)",
+      nome: "ANATÁLIA",
       local: "CRUZEIRO DE LAJE",
     },
     {
       ramal: "236",
-      nome: "TALITA SOARES (Recepção)",
-      local: "GAMBOA - Responsável por gamboa galeão Guarapuá e batateira",
+      nome: "TALITA SOARES",
+      local: "GAMBOA",
     },
     {
       ramal: "228",
-      nome: "CAMILA BARROS DOS ANJOS (RECEPÇÃO)",
+      nome: "CAMILA BARROS DOS ANJOS",
       local: "GANDU",
     },
     {
       ramal: "229",
-      nome: "ELIELMA PAIXÃO (RECEPÇÃO)",
+      nome: "ELIELMA PAIXÃO",
       local: "GANDU",
     },
     {
       ramal: "238",
-      nome: "ANA PAULA GUSMÃO (RECEPÇÃO)",
+      nome: "ANA PAULA GUSMÃO",
       local: "JIQUIRIÇÁ",
     },
     {
@@ -357,19 +357,18 @@ export async function GET(request: Request) {
     },
     {
       ramal: "243",
-      nome: "SAMUEL MOTA ( RECEPÇÃO )",
+      nome: "SAMUEL MOTA",
       local: "LAJE",
     },
     {
       ramal: "244",
-      nome: "GABRIELA MELO (RECEPÇÃO)",
+      nome: "GABRIELA MELO",
       local: "LAJE",
     },
     {
       ramal: "273",
       nome: "DAHIANA FERREIRA",
-      local:
-        "MARAU - Responsável pelas seguintes localidades: ALGODOES, SAQUAIRA, SALEIRO, ARANDIS, CASSANGE, SEDE DE MARAU, CAUBI, VILAREJO KM 20, TREVO DE MARAU-RUA DE PALHA",
+      local: "MARAU",
     },
     {
       ramal: "222",
@@ -388,17 +387,17 @@ export async function GET(request: Request) {
     },
     {
       ramal: "234",
-      nome: "JESSICA SILVA (RECEPÇÃO)",
+      nome: "JESSICA SILVA",
       local: "NILO PEÇANHA",
     },
     {
       ramal: "237",
-      nome: "GABRIEL LOBO (RECEPÇÃO)",
+      nome: "GABRIEL LOBO",
       local: "PALMA",
     },
     {
       ramal: "225",
-      nome: "ÂNDILA SOUZA (RECEPÇÃO)",
+      nome: "ÂNDILA SOUZA",
       local: "UBAÍRA",
     },
     {
@@ -414,7 +413,7 @@ export async function GET(request: Request) {
 
     {
       ramal: "233",
-      nome: "GABRIELA FRANÇA (RECEPÇÃO)",
+      nome: "GABRIELA FRANÇA",
       local: "CRUZEIRO DE LAJE",
     },
   ]);
