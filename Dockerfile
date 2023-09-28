@@ -17,7 +17,7 @@ COPY package-lock.json .
 
 # Atualiza o npm para a versão mais recente
 # Update npm to the latest version
-RUN npm install -g npm@latest
+# RUN npm install -g npm@latest
 
 # Instala as dependências da aplicação
 # Install the dependencies for your application
