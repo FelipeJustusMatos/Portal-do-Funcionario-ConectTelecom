@@ -88,7 +88,7 @@ export default function Home() {
                     onClick={() => router.push("/listramais")}
                     className="btn w-full bg-blue-700 hover:bg-green-700 text-white "
                   >
-                    Acessar
+                    Listar
                   </button>
                 </div>
               </div>
