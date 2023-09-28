@@ -170,7 +170,7 @@ export default function RootLayout({ children }) {
                   currentPath === "/trocadeplano" ? "bg-gray-500" : "bg-neutral"
                 } hover:bg-gray-500`}
               >
-                Troca de Plano
+                Troca De Plano
               </button>
             </Link>
             <Link href="/listramais">
