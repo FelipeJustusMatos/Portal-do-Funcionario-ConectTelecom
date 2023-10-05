@@ -9,7 +9,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "242",
-      nome: "ZENY",
+      nome:"ZENY",
       local: "COPA",
     },
     {
@@ -39,7 +39,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "211",
-      nome: "ANA CAROLINA ALVES DE JESUS",
+      nome: "CARINA",
       local: "COBRANÇA",
     },
     {
@@ -121,7 +121,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "209",
-      nome: "MARIA EDUARDA GARCIA",
+      nome: "CAROLINA",
       local: "COBRANÇA",
     },
     {
@@ -132,7 +132,7 @@ export async function GET(request: Request) {
     {
       ramal: "206",
       nome: "JAMILY DE MELO",
-      local: "FINANCEIRO",
+      local: "COBRANÇA",
     },
     {
       ramal: "119",
