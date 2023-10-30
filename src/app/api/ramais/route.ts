@@ -9,8 +9,13 @@ export async function GET(request: Request) {
     },
     {
       ramal: "242",
-      nome:"ZENY",
+      nome: "ZENY",
       local: "COPA",
+    },
+    {
+      ramal: "101",
+      nome: "ALEKSON",
+      local: "SUPORTE",
     },
     {
       ramal: "242",
