@@ -43,11 +43,6 @@ export async function GET(request: Request) {
       local: "COBRANÇA",
     },
     {
-      ramal: "211",
-      nome: "CARINA",
-      local: "COBRANÇA",
-    },
-    {
       ramal: "213",
       nome: "ADILEIA NOVAIS",
       local: "COBRANÇA",
@@ -215,9 +210,9 @@ export async function GET(request: Request) {
       local: "RECEPÇÃO",
     },
     {
-      ramal: "264",
+      ramal: "211",
       nome: "CARINA",
-      local: "RECEPÇÃO",
+      local: "COBRANÇA",
     },
     {
       ramal: "265",
@@ -316,12 +311,17 @@ export async function GET(request: Request) {
     },
     {
       ramal: "267",
-      nome: "LARISSA SANTOS",
+      nome: "Divile",
+      local: "CAMAMU",
+    },
+    {
+      ramal: "268",
+      nome: "Rafaela",
       local: "CAMAMU",
     },
     {
       ramal: "269",
-      nome: "DIVILE RAMOS",
+      nome: "Shanara",
       local: "CAMAMU",
     },
     {
@@ -372,7 +372,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "273",
-      nome: "DAHIANA FERREIRA",
+      nome: "FABRICIO GOIS",
       local: "MARAU",
     },
     {
@@ -382,7 +382,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "223",
-      nome: "EDILENE",
+      nome: "JAILDA",
       local: "MUTUÍPE",
     },
     {
@@ -397,7 +397,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "237",
-      nome: "GABRIEL LOBO",
+      nome: "MAGALI",
       local: "PALMA",
     },
     {
