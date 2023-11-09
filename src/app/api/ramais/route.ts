@@ -342,7 +342,7 @@ export async function GET(request: Request) {
     },
     {
       ramal: "228",
-      nome: "CAMILA BARROS DOS ANJOS",
+      nome: "RINALDO",
       local: "GANDU",
     },
     {
